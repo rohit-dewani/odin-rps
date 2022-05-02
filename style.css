@@ -1,0 +1,12 @@
+.display-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.score {
+    font-size: 6em;;
+}
+
+.choice {
+    font-size: 1.5em;
+}
