@@ -1,6 +1,7 @@
 .display-box {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
 
 .score {
@@ -8,5 +9,10 @@
 }
 
 .choice {
+    font-size: 1.5em;
+}
+
+.result-box {
+    align-self: flex-end;
     font-size: 1.5em;
 }

@@ -61,39 +61,25 @@ function game(playerChoice){
     }
 
     document.getElementById('player-score').innerHTML = yourScore;
-    document.getElementById('player-choice').innerHTML = playerChoice;
+    document.getElementById('player-choice').innerHTML = "You chose: " + playerChoice;
     document.getElementById('computer-score').innerHTML = computerScore;
-    document.getElementById('computer-choice').innerHTML = computerChoice;
+    document.getElementById('computer-choice').innerHTML = "Computer chose: " + computerChoice;
+    document.getElementById('result').innerHTML = result;
 
     if(yourScore == 5){
-        gameOver('won');
+        gameOver('You won!');
     }
     if(computerScore == 5){
-        gameOver('lost');
+        gameOver('You lost!');
     }
 
 }
 
 function gameOver(gameState){
-    
-    if(gameState == 'won'){
-        let text = "You won \n Do you wanna play again?"
-        if(confirm(text) == true){
-            window.location.reload();
-        }
-        else {
-            window.history.back();
-        }
-    }
 
-    else {
-        let text = "You lost \n Do you wanna play again?"
-        if(confirm(text) == true){
-            window.location.reload();
-        }
-        else {
-            window.history.back();
-        }
-    }
+    let text = gameState.concat("\nDo you want to play again?")
+
+    if(confirm(text) == true) window.location.reload();
+    else window.history.back();
 
 }
